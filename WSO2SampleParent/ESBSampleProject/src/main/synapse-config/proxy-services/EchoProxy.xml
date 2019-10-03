@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="EchoProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <payloadFactory description="Build a payload" media-type="json">
+                <format>{“message”:”Hello World”}</format>
+                <args/>
+            </payloadFactory>
+            <respond description="Send response"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>
