@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="HelloProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <payloadFactory description="Set the payload" media-type="json">
+                <format>{“message”:”Hello world!”}</format>
+                <args/>
+            </payloadFactory>
+            <respond description="Send the response"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>
