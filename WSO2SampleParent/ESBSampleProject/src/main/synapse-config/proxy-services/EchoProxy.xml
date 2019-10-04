@@ -3,7 +3,7 @@
     <target>
         <inSequence>
             <log description="Log message">
-                <property name="XXXX" value="This is a test"/>
+                <property name="XXXX" value="This is a test updated"/>
             </log>
             <payloadFactory description="Build a payload" media-type="json">
                 <format>{“message”:”Hello World”}</format>
